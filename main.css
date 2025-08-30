@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Gray scale */
+  --gray-50:  #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --gray-950: #0a0a0a;
+
+  /* Blue scale */
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-400: #60a5fa;
+  --blue-600: #2563eb;
+  --blue-900: #1e3a8a;
+  --blue-950: #172554;
+
+  /* Core colors */
+  --white: hsl(0, 100%, 100%);
+  --black: #000000;
+}
+:root {
+  --bg: var(--gray-50);
+  --element: var(--gray-400);
+  --border: var(--blue-900);
+  --text-primary: var(--gray-950);
+  --text-secondary: var(--gray-600);
+}
+/* Dark theme */
+.dark {
+  --bg: var(--gray-950);
+  --element: var(--blue-950);
+  --border: var(--blue-900);
+  --text-primary: var(--white);
+  --text-secondary: var(--gray-400);
+}
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+}
+
+.header {
+  background: var(--element);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 
+    0 4px 10px var(--element), 
+    0 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+.header_text {
+  font-size: 1.1rem;
+}
+.toggle {
+  padding: 5px;
+  border: 2px solid var(--border);
+  color: var(--text-primary);
+  background: inherit;
+  display: flex;
+  gap: .8rem;
+  border-radius: 8px;
+  font-size: .8rem;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.search {
+  padding-left: 40px;
+  max-width: 280px;
+}
+input[placeholder] {
+  color: var(--text-secondary);
+  padding-left: 40px;
+}
+.both {
+  background: var(--element);
+  padding: 5px 8px;
+  color: var(--text-primary);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+}
+.select {
+  max-width: 18⁰0px;
+}
+.input-wrapper {
+  position: relative;
+}
+.input-wrapper i {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-primary);
+  pointer-events: none;
+}
