@@ -1,47 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta>
-    <meta>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="main.css">
-  </head>
-  
-  <body>
-    <main class="">
-      <header class="header">
-        <h1 class="header_text">Where in the world?</h1>
-        
-        <button id="toggle" class="toggle" type='button' >
-            <i class="fa-solid fa-moon"></i>
-           <i>Dark Mode</i>
-        </button>
-      </header>
-      
-      <section class="input">
-        <div class="inputs">
-          <label class="input-wrapper">
-            <i class="fa-solid fa-globe"></i>
-            <input class="search both" type="text" name="search" placeholder="Search for a country...">
-          </label>
-          <label class="">
-             <select class="select both" id='region'>
-               <option value="" disabled selected hidden>Filter by region:</option>
-              <option class="op" value="africa">Africa</option>
-              <option class="op" value="america">America</option>
-              <option class="op" value="asia">Asia</option>
-              <option class="op" value="europe">Europe</option>
-              <option class="op" value="oceania">Oceania</option>
-            </select>
-          </label>
-        </div>
-      </section>
-      
-      <section class="" id="countries">
-        
-      </section>
-    </main>
-    
-    <script src='main.js'></script>
-  </body>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+            integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="animations.css" />
+    </head>
+
+    <body>
+        <main class="">
+            <header class="header">
+                <h1 class="header_text">Where in the world?</h1>
+
+                <button id="toggle" class="toggle" type="button">
+             
+                </button>
+            </header>
+
+            <section class="input">
+                <div class="inputs">
+                    <label class="input-wrapper">
+                        <i class="fa-solid fa-globe"></i>
+                        <input
+                            class="search both"
+                            type="text"
+                            name="search"
+                            placeholder="Search for a country..."
+                        />
+                    </label>
+                    <label class="select-wrapper both">
+                        <div class="selected">Filter by region:</div>
+                        <i class="fa-solid fa-circle-chevron-down"></i>
+                        <ul class="options">
+                            <li data-value="all">All</li>
+                            <li data-value="africa">Africa</li>
+                            <li data-value="americas">America</li>
+                            <li data-value="asia">Asia</li>
+                            <li data-value="europe">Europe</li>
+                            <li data-value="oceania">Oceania</li>
+                        </ul>
+                    </label>
+                </div>
+            </section>
+
+            <section id="countries"></section>
+
+            <section id="country-page"></section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
 </html>
